@@ -3,7 +3,7 @@
     "home": {
         "title": "Fresh Cakes, Coffee & Happiness",
         "subtitle": "A cozy bakery serving delicious cakes, pastries and coffee in Kathmandu.",
-        "hero_image": "images/hero.jpg"
+        "hero_image": "images/05COOKING-TIRAMISU1-jumbo-v2.jpg"
     },
     "about": {
         "title": "About Crave Bakery",
@@ -39,16 +39,22 @@
             "name": "Blueberry Cheesecake",
             "price": "NPR 35000",
             "image": "images/cake1.jpg"
+        },
+        {
+            "name": "Blueberry Cheesecake",
+            "price": "NPR free",
+            "image": "images/cake1.jpg"
         }
     ],
     "reviews": [
         "“Absolutely delicious Tiramisu — creamy and rich!”",
         "“Peaceful songs, free WiFi, and amazing pastries!”",
-        "“Cakes are soft, fresh and full of flavor.”"
+        "“Cakes are soft, fresh and full of flavor.”",
+        "“Fucking love the place, went with my gf.”"
     ],
     "contact": {
-        "phone": "+977 9800000000",
+        "phone": "+977 9849165300",
         "address": "Bakhundol, Lalitpur",
-        "map_embed": "GOOGLE_MAP_EMBED_LINK"
+        "map_embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.046876483984!2d85.32030321506198!3d27.67594798280496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19e9c4f4b5b5%3A0xdbf96133511a387e!2sCRAVE%20YALA%20the%20bakery%20and%20coffee%20shop!5e0!3m2!1sen!2snp!4v1629876543210!5m2!1sen!2snp"
     }
 }
