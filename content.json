@@ -1,5 +1,5 @@
 {
-    "site_title": "Crave Bakery",
+    "site_title": "Crave Bakery Yalaa",
     "home": {
         "title": "Fresh Cakes, Coffee & Happiness",
         "subtitle": "A cozy bakery serving delicious cakes, pastries and coffee in Kathmandu.",
@@ -23,7 +23,7 @@
         },
         {
             "name": "Blueberry Cheesecake",
-            "price": "NPR 350",
+            "price": "NPR 35000",
             "image": "images/cake1.jpg"
         }
     ],
