@@ -20,7 +20,7 @@
         {
             "name": "Gold Leaf Chocolate Cake",
             "price": "NPR 450",
-            "image": "images/unnamed.webp",
+            "image": "images/cake1.jpg",
             "description": "Rich dark chocolate with edible gold leaf."
         }
     ],
@@ -38,6 +38,11 @@
         {
             "name": "Blueberry Cheesecake",
             "price": "NPR 35000",
+            "image": "images/cake1.jpg"
+        }
+         {
+            "name": "Blueberry Cheesecake",
+            "price": "NPR free",
             "image": "images/cake1.jpg"
         }
     ],
