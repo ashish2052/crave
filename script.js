@@ -28,7 +28,14 @@ document.addEventListener('DOMContentLoaded', () => {
 function initSite(data) {
     // Global Elements
     document.title = data.site_title;
-    document.querySelectorAll('.logo').forEach(el => el.textContent = data.site_title);
+
+    document.querySelectorAll('.logo').forEach(el => {
+        if (data.logo_image) {
+            el.innerHTML = `<img src="${data.logo_image}" alt="${data.site_title}">`;
+        } else {
+            el.textContent = data.site_title;
+        }
+    });
 
     // Page Specific Logic
     const page = document.body.getAttribute('data-page');

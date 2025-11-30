@@ -534,3 +534,15 @@ h4 {
 
     /* Simplified for now */
 }
+/* Logo Image Support */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; /* Adjust based on navbar height */
+    width: auto;
+    object-fit: contain;
+}
+
