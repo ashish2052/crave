@@ -20,7 +20,7 @@
         {
             "name": "Gold Leaf Chocolate Cake",
             "price": "NPR 450",
-            "image": "images/cake1.jpg",
+            "image": "images/unnamed.webp",
             "description": "Rich dark chocolate with edible gold leaf."
         }
     ],
@@ -45,10 +45,11 @@
         "“Absolutely delicious Tiramisu — creamy and rich!”",
         "“Peaceful songs, free WiFi, and amazing pastries!”",
         "“Cakes are soft, fresh and full of flavor.”"
+        "“Fucking love the place, went with my gf.”"
     ],
     "contact": {
-        "phone": "+977 9800000000",
+        "phone": "+977 9849165300",
         "address": "Bakhundol, Lalitpur",
-        "map_embed": "GOOGLE_MAP_EMBED_LINK"
+        "map_embed": "https://www.google.com/maps/place/CRAVE+YALA+the+bakery+and+coffee+shop/@27.6759479,85.3203032,17z/data=!3m1!4b1!4m6!3m5!1s0x39eb19e9c4f4b5b5:0xdbf96133511a387e!8m2!3d27.6759432!4d85.3228781!16s%2Fg%2F11ptqpjbn4?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D"
     }
 }
