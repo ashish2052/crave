@@ -1,114 +1,145 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Page Transition
-    const transitionEl = document.querySelector('.page-transition');
-    setTimeout(() => {
-        transitionEl.classList.remove('active');
-    }, 100);
+    // Initialize AOS
+    AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100
+    });
 
-    document.querySelectorAll('a').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const href = this.getAttribute('href');
-            if (href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) return;
-
-            e.preventDefault();
-            transitionEl.classList.add('active');
-            setTimeout(() => {
-                window.location.href = href;
-            }, 600);
-        });
+    // Navbar Scroll Effect
+    window.addEventListener('scroll', () => {
+        const nav = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
     });
 
     // Fetch Content
     fetch('content.json')
-        .then(response => response.json())
+        .then(res => res.json())
         .then(data => {
-            loadCommonContent(data);
-
-            if (document.getElementById('specials-grid')) {
-                loadHomeContent(data);
-            }
-
-            if (document.getElementById('menu-grid')) {
-                loadMenuContent(data);
-            }
+            initSite(data);
         })
-        .catch(error => console.error('Error loading content:', error));
+        .catch(err => console.error('Error loading content:', err));
 });
 
-function loadCommonContent(data) {
-    document.title = data.site_title + (window.location.pathname.includes('menu') ? ' - Menu' : '');
-    const navTitle = document.getElementById('nav-site-title');
-    if (navTitle) navTitle.textContent = data.site_title;
-    const footerTitle = document.getElementById('footer-site-title');
-    if (footerTitle) footerTitle.textContent = data.site_title;
+function initSite(data) {
+    // Global Elements
+    document.title = data.site_title;
+    document.querySelectorAll('.logo').forEach(el => el.textContent = data.site_title);
+
+    // Page Specific Logic
+    const page = document.body.getAttribute('data-page');
+
+    if (page === 'home') renderHome(data);
+    if (page === 'menu') renderMenu(data);
+    if (page === 'gallery') renderGallery(data);
+    if (page === 'about') renderAbout(data);
+    if (page === 'contact') renderContact(data);
+
+    // Footer
+    const year = new Date().getFullYear();
+    const footer = document.querySelector('footer p');
+    if (footer) footer.innerHTML = `&copy; ${year} ${data.site_title}. Crafted with <span style="color:var(--gold)">♥</span>`;
 }
 
-function loadHomeContent(data) {
+function renderHome(data) {
     // Hero
-    if (data.home) {
-        document.getElementById('home-title').textContent = data.home.title;
-        document.getElementById('home-subtitle').textContent = data.home.subtitle;
-        document.getElementById('hero-img').src = data.home.hero_image;
-    }
+    document.querySelector('.hero-text h1').textContent = data.hero.title;
+    document.querySelector('.hero-text .subtitle').textContent = data.hero.subtitle;
+    document.querySelector('.hero-text .btn').textContent = data.hero.cta_text;
+    document.querySelector('.hero-img-wrapper img').src = data.hero.image;
 
     // Specials
-    const specialsGrid = document.getElementById('specials-grid');
-    if (data.specials && specialsGrid) {
-        specialsGrid.innerHTML = data.specials.map(item => createCard(item)).join('');
-    }
-
-    // About
-    if (data.about) {
-        document.getElementById('about-title').textContent = data.about.title;
-        document.getElementById('about-desc').textContent = data.about.description;
-        document.getElementById('about-img').src = data.about.image;
+    const specialsGrid = document.querySelector('#specials-grid');
+    if (specialsGrid) {
+        specialsGrid.innerHTML = data.specials.map((item, index) => `
+            <div class="card" data-aos="fade-up" data-aos-delay="${index * 100}">
+                <div class="card-img"><img src="${item.image}" alt="${item.name}"></div>
+                <div class="card-content">
+                    <h3 class="card-title">${item.name}</h3>
+                    <span class="card-price">${item.price}</span>
+                    <p class="card-desc">${item.description}</p>
+                </div>
+            </div>
+        `).join('');
     }
 
     // Reviews
-    const reviewsContainer = document.getElementById('reviews-container');
-    if (data.reviews && reviewsContainer) {
-        let currentReview = 0;
+    const reviewsContainer = document.querySelector('.review-slider');
+    if (reviewsContainer) {
+        let current = 0;
         const showReview = () => {
-            reviewsContainer.style.opacity = 0;
-            setTimeout(() => {
-                reviewsContainer.innerHTML = `<p class="review-text">${data.reviews[currentReview]}</p>`;
-                reviewsContainer.style.opacity = 1;
-                currentReview = (currentReview + 1) % data.reviews.length;
-            }, 500);
+            const review = data.reviews[current];
+            reviewsContainer.innerHTML = `
+                <div class="review-card fade-in">
+                    <p class="review-text">${review.text}</p>
+                    <p class="review-author">— ${review.author}</p>
+                </div>
+            `;
+            current = (current + 1) % data.reviews.length;
         };
         showReview();
         setInterval(showReview, 5000);
     }
-
-    // Contact
-    if (data.contact) {
-        document.getElementById('contact-phone').textContent = data.contact.phone;
-        document.getElementById('contact-address').textContent = data.contact.address;
-        const mapContainer = document.getElementById('contact-map');
-        if (data.contact.map_embed && data.contact.map_embed.startsWith('http')) {
-            mapContainer.innerHTML = `<iframe src="${data.contact.map_embed}" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>`;
-        }
-    }
 }
 
-function loadMenuContent(data) {
-    const menuGrid = document.getElementById('menu-grid');
-    if (data.menu && menuGrid) {
-        menuGrid.innerHTML = data.menu.map(item => createCard(item)).join('');
-    }
-}
+function renderMenu(data) {
+    const sidebar = document.querySelector('.menu-sidebar');
+    const content = document.querySelector('.menu-content');
 
-function createCard(item) {
-    return `
-        <div class="menu-item">
-            <div style="overflow:hidden;">
-                <img src="${item.image}" alt="${item.name}">
-            </div>
-            <div class="menu-item-content">
-                <h3>${item.name}</h3>
-                ${item.description ? `<p class="desc">${item.description}</p>` : ''}
-                <p class="price">${item.price}</p>
+    // Categories
+    const categories = Object.keys(data.menu_categories);
+
+    sidebar.innerHTML = categories.map(cat => `
+        <a href="#${cat}" class="menu-cat-link">${cat}</a>
+    `).join('');
+
+    content.innerHTML = categories.map(cat => `
+        <div id="${cat}" class="menu-category" data-aos="fade-up">
+            <h2>${cat}</h2>
+            <div class="grid grid-2">
+                ${data.menu_categories[cat].map(item => `
+                    <div class="card menu-card">
+                        <div style="display:flex; gap:1rem; align-items:center; padding:1rem;">
+                            <img src="${item.image}" style="width:100px; height:100px; object-fit:cover; border-radius:50%;" alt="${item.name}">
+                            <div>
+                                <h3 class="card-title" style="margin:0; font-size:1.2rem;">${item.name}</h3>
+                                <p class="card-desc" style="font-size:0.9rem;">${item.description}</p>
+                                <span class="card-price" style="margin:0.5rem 0 0;">${item.price}</span>
+                            </div>
+                        </div>
+                    </div>
+                `).join('')}
             </div>
         </div>
-    `;
+    `).join('');
+}
+
+function renderGallery(data) {
+    const grid = document.querySelector('.gallery-grid');
+    grid.innerHTML = data.gallery.map((item, index) => `
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="${index * 50}">
+            <img src="${item.image}" alt="${item.caption}">
+        </div>
+    `).join('');
+}
+
+function renderAbout(data) {
+    document.querySelector('#about-title').textContent = data.about.title;
+    document.querySelector('#about-subtitle').textContent = data.about.subtitle;
+    document.querySelector('#about-desc').textContent = data.about.description;
+    document.querySelector('#about-img').src = data.about.image;
+}
+
+function renderContact(data) {
+    document.querySelector('#phone').textContent = data.contact.phone;
+    document.querySelector('#address').textContent = data.contact.address;
+    document.querySelector('#email').textContent = data.contact.email;
+    document.querySelector('#whatsapp-link').href = `https://wa.me/${data.contact.whatsapp}`;
+
+    const mapFrame = document.querySelector('#map-frame');
+    if (mapFrame) mapFrame.src = data.contact.google_map_embed;
 }

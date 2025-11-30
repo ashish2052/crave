@@ -4,106 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crave Bakery</title>
+    <title>Crave Bakery Yala</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&family=Playfair+Display:wght@400;700&display=swap"
         rel="stylesheet">
 </head>
 
-<body>
+<body data-page="home">
 
-    <div class="page-transition"></div>
-
-    <!-- Navigation -->
     <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo" id="nav-site-title">Crave Bakery</a>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Crave</a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header id="home" class="hero">
-        <div class="container hero-content">
-            <div class="hero-text">
-                <h1 id="home-title">Loading...</h1>
-                <p id="home-subtitle"></p>
+    <header class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-container">
+            <div class="hero-text" data-aos="fade-right">
+                <h1>Loading...</h1>
+                <p class="subtitle"></p>
                 <a href="menu.html" class="btn">Explore Menu</a>
             </div>
-            <div class="hero-image-container">
-                <img id="hero-img" src="" alt="Delicious Cake">
+            <div class="hero-image" data-aos="fade-left">
+                <div class="hero-img-wrapper">
+                    <img src="" alt="Hero Cake">
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Specials Section -->
-    <section id="specials" class="section">
-        <div class="container">
-            <h2 class="section-title">Our Specials</h2>
-            <div id="specials-grid" class="menu-grid">
-                <!-- Specials injected here -->
-            </div>
-            <div style="text-align: center; margin-top: 50px;">
-                <a href="menu.html" class="btn">View Full Menu</a>
-            </div>
+    <section class="section" style="padding: 8rem 0;">
+        <h2 class="section-title" data-aos="fade-up">Our <span>Specials</span></h2>
+        <div id="specials-grid" class="grid grid-3">
+            <!-- Injected via JS -->
+        </div>
+        <div style="text-align: center; margin-top: 4rem;" data-aos="fade-up">
+            <a href="menu.html" class="btn">View Full Menu</a>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section about">
-        <div class="container about-grid">
-            <div class="about-image">
-                <img id="about-img" src="" alt="About Crave Bakery">
-            </div>
-            <div class="about-text">
-                <h2 id="about-title"></h2>
-                <p id="about-desc"></p>
-            </div>
+    <section class="reviews-section">
+        <h2 class="section-title">Client <span>Love</span></h2>
+        <div class="review-slider">
+            <!-- Injected via JS -->
         </div>
     </section>
 
-    <!-- Reviews Section -->
-    <section id="reviews" class="section reviews">
-        <div class="container">
-            <h2 class="section-title">Customer Love</h2>
-            <div class="reviews-carousel">
-                <div id="reviews-container" class="review-card">
-                    <!-- Reviews injected here -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section contact">
-        <div class="container">
-            <h2 class="section-title">Visit Us</h2>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Contact Details</h3>
-                    <p><strong>Phone:</strong> <span id="contact-phone"></span></p>
-                    <p><strong>Address:</strong> <span id="contact-address"></span></p>
-                </div>
-                <div class="map-container">
-                    <div id="contact-map" class="map-placeholder">Map Loading...</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 <span id="footer-site-title">Crave Bakery</span>. All rights reserved.</p>
-        </div>
+    <footer style="text-align: center; padding: 2rem; background: var(--dark); color: #888;">
+        <p></p>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 

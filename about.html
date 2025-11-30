@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu - Crave Bakery</title>
+    <title>About - Crave Bakery</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link
@@ -12,7 +12,7 @@
         rel="stylesheet">
 </head>
 
-<body data-page="menu">
+<body data-page="about">
 
     <nav class="navbar">
         <div class="nav-container">
@@ -27,14 +27,20 @@
         </div>
     </nav>
 
-    <div class="menu-layout">
-        <aside class="menu-sidebar">
-            <!-- Categories injected here -->
-        </aside>
-        <main class="menu-content">
-            <!-- Menu items injected here -->
-        </main>
-    </div>
+    <section class="hero" style="height: auto; padding: 150px 0 100px;">
+        <div class="hero-container">
+            <div class="hero-image" data-aos="fade-right">
+                <div class="hero-img-wrapper">
+                    <img id="about-img" src="" alt="About Us">
+                </div>
+            </div>
+            <div class="hero-text" data-aos="fade-left" style="padding-left: 4rem; padding-right: 0;">
+                <h1 id="about-title" style="font-size: 4rem;"></h1>
+                <h3 id="about-subtitle" style="color: var(--gold); margin-bottom: 2rem;"></h3>
+                <p id="about-desc" style="font-size: 1.1rem; line-height: 1.8; color: #555;"></p>
+            </div>
+        </div>
+    </section>
 
     <footer style="text-align: center; padding: 2rem; background: var(--dark); color: #888;">
         <p></p>

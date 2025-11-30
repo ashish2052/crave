@@ -1,13 +1,15 @@
 {
-    "site_title": "Crave Bakery Yalaa",
-    "home": {
-        "title": "Fresh Cakes, Coffee & Happiness",
-        "subtitle": "A cozy bakery serving delicious cakes, pastries and coffee in Kathmandu.",
-        "hero_image": "images/05COOKING-TIRAMISU1-jumbo-v2.jpg"
+    "site_title": "Crave Bakery Yala",
+    "hero": {
+        "title": "Artisanal Cakes, Crafted with Love",
+        "subtitle": "Experience the finest pastries and coffee in the heart of Kathmandu.",
+        "cta_text": "Explore Menu",
+        "image": "images/hero.jpg"
     },
     "about": {
-        "title": "About Crave Bakery",
-        "description": "Crave Bakery is known for rich pastries, flavorful cakes, peaceful songs, free WiFi, and friendly staff. Customer favorites include Tiramisu, Oreo Milkshake, and Butterscotch Cake.",
+        "title": "Our Story",
+        "subtitle": "Tradition Meets Elegance",
+        "description": "At Crave Bakery Yala, we believe that every bite should be a celebration. Founded with a passion for artisanal baking, we combine traditional techniques with modern aesthetics to create pastries that are as beautiful as they are delicious. From our signature Tiramisu to our handcrafted coffees, everything is made fresh daily using the finest local ingredients.",
         "image": "images/cake1.jpg"
     },
     "specials": [
@@ -15,46 +17,130 @@
             "name": "Signature Tiramisu",
             "price": "NPR 300",
             "image": "images/cake2.jpg",
-            "description": "Our best-selling classic Italian dessert."
+            "description": "Layers of espresso-soaked ladyfingers and mascarpone cream, dusted with premium cocoa."
         },
         {
             "name": "Gold Leaf Chocolate Cake",
             "price": "NPR 450",
             "image": "images/cake1.jpg",
-            "description": "Rich dark chocolate with edible gold leaf."
+            "description": "Decadent dark chocolate ganache cake topped with edible 24k gold leaf."
+        },
+        {
+            "name": "Pistachio Rose Delight",
+            "price": "NPR 380",
+            "image": "images/cake2.jpg",
+            "description": "A delicate fusion of roasted pistachios and fragrant rose water essence."
         }
     ],
-    "menu": [
+    "menu_categories": {
+        "Cakes": [
+            {
+                "name": "Blueberry Cheesecake",
+                "price": "NPR 350",
+                "image": "images/cake1.jpg",
+                "description": "Creamy New York style cheesecake with fresh blueberry compote."
+            },
+            {
+                "name": "Red Velvet",
+                "price": "NPR 320",
+                "image": "images/cake2.jpg",
+                "description": "Classic red velvet sponge with smooth cream cheese frosting."
+            },
+            {
+                "name": "Dark Forest",
+                "price": "NPR 300",
+                "image": "images/cake1.jpg",
+                "description": "Rich chocolate sponge with cherries and whipped cream."
+            }
+        ],
+        "Pastries": [
+            {
+                "name": "Butter Croissant",
+                "price": "NPR 150",
+                "image": "images/cake2.jpg",
+                "description": "Flaky, buttery, and golden brown."
+            },
+            {
+                "name": "Chocolate Danish",
+                "price": "NPR 180",
+                "image": "images/cake1.jpg",
+                "description": "Filled with rich dark chocolate."
+            }
+        ],
+        "Drinks": [
+            {
+                "name": "Oreo Milkshake",
+                "price": "NPR 250",
+                "image": "images/drink1.jpg",
+                "description": "Thick and creamy shake with crushed Oreos."
+            },
+            {
+                "name": "Cappuccino",
+                "price": "NPR 200",
+                "image": "images/drink1.jpg",
+                "description": "Espresso with steamed milk and foam."
+            },
+            {
+                "name": "Iced Americano",
+                "price": "NPR 180",
+                "image": "images/drink1.jpg",
+                "description": "Chilled espresso with water and ice."
+            }
+        ],
+        "Specialties": [
+            {
+                "name": "Tiramisu Cup",
+                "price": "NPR 300",
+                "image": "images/cake2.jpg",
+                "description": "Our famous Tiramisu in a convenient cup."
+            }
+        ]
+    },
+    "gallery": [
         {
-            "name": "Tiramisu Cup",
-            "price": "NPR 300",
-            "image": "images/cake2.jpg"
+            "image": "images/cake1.jpg",
+            "caption": "Wedding Cake Masterpiece"
         },
         {
-            "name": "Oreo Milkshake",
-            "price": "NPR 250",
-            "image": "images/drink1.jpg"
+            "image": "images/cake2.jpg",
+            "caption": "Freshly Baked Croissants"
         },
         {
-            "name": "Blueberry Cheesecake",
-            "price": "NPR 35000",
-            "image": "images/cake1.jpg"
+            "image": "images/drink1.jpg",
+            "caption": "Artisan Coffee"
         },
         {
-            "name": "Blueberry Cheesecake",
-            "price": "NPR free",
-            "image": "images/cake1.jpg"
+            "image": "images/hero.jpg",
+            "caption": "Cozy Ambience"
+        },
+        {
+            "image": "images/cake1.jpg",
+            "caption": "Chocolate Indulgence"
+        },
+        {
+            "image": "images/cake2.jpg",
+            "caption": "Berry Delight"
         }
     ],
     "reviews": [
-        "“Absolutely delicious Tiramisu — creamy and rich!”",
-        "“Peaceful songs, free WiFi, and amazing pastries!”",
-        "“Cakes are soft, fresh and full of flavor.”",
-        "“Fucking love the place, went with my gf.”"
+        {
+            "text": "“Absolutely delicious Tiramisu — creamy, rich, and authentic. The best I've had in Kathmandu!”",
+            "author": "Sushil K."
+        },
+        {
+            "text": "“Peaceful songs, free WiFi, and amazing pastries! A perfect spot for work or a date.”",
+            "author": "Anjali S."
+        },
+        {
+            "text": "“Cakes are soft, fresh and full of flavor. The Gold Leaf Cake is a must-try!”",
+            "author": "Rohan M."
+        }
     ],
     "contact": {
         "phone": "+977 9849165300",
         "address": "Bakhundol, Lalitpur",
-        "map_embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.046876483984!2d85.32030321506198!3d27.67594798280496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19e9c4f4b5b5%3A0xdbf96133511a387e!2sCRAVE%20YALA%20the%20bakery%20and%20coffee%20shop!5e0!3m2!1sen!2snp!4v1629876543210!5m2!1sen!2snp"
+        "email": "hello@cravebakery.com",
+        "whatsapp": "9779849165300",
+        "google_map_embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.046876483984!2d85.32030321506198!3d27.67594798280496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19e9c4f4b5b5%3A0xdbf96133511a387e!2sCRAVE%20YALA%20the%20bakery%20and%20coffee%20shop!5e0!3m2!1sen!2snp!4v1629876543210!5m2!1sen!2snp"
     }
 }

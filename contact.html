@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu - Crave Bakery</title>
+    <title>Contact - Crave Bakery</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link
@@ -12,7 +12,7 @@
         rel="stylesheet">
 </head>
 
-<body data-page="menu">
+<body data-page="contact">
 
     <nav class="navbar">
         <div class="nav-container">
@@ -27,18 +27,32 @@
         </div>
     </nav>
 
-    <div class="menu-layout">
-        <aside class="menu-sidebar">
-            <!-- Categories injected here -->
-        </aside>
-        <main class="menu-content">
-            <!-- Menu items injected here -->
-        </main>
-    </div>
+    <div class="contact-wrapper">
+        <div class="contact-info-panel" data-aos="fade-right">
+            <h1 style="font-size: 4rem; margin-bottom: 3rem; color: var(--brown);">Get in <span
+                    style="color: var(--gold);">Touch</span></h1>
 
-    <footer style="text-align: center; padding: 2rem; background: var(--dark); color: #888;">
-        <p></p>
-    </footer>
+            <div class="contact-detail">
+                <h3>Phone</h3>
+                <p id="phone"></p>
+            </div>
+
+            <div class="contact-detail">
+                <h3>Address</h3>
+                <p id="address"></p>
+            </div>
+
+            <div class="contact-detail">
+                <h3>Email</h3>
+                <p id="email"></p>
+            </div>
+
+            <a id="whatsapp-link" href="#" class="btn" style="margin-top: 2rem;">Chat on WhatsApp</a>
+        </div>
+        <div class="contact-map-panel" data-aos="fade-left">
+            <iframe id="map-frame" src="" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
