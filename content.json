@@ -10,6 +10,20 @@
         "description": "Crave Bakery is known for rich pastries, flavorful cakes, peaceful songs, free WiFi, and friendly staff. Customer favorites include Tiramisu, Oreo Milkshake, and Butterscotch Cake.",
         "image": "images/cake1.jpg"
     },
+    "specials": [
+        {
+            "name": "Signature Tiramisu",
+            "price": "NPR 300",
+            "image": "images/cake2.jpg",
+            "description": "Our best-selling classic Italian dessert."
+        },
+        {
+            "name": "Gold Leaf Chocolate Cake",
+            "price": "NPR 450",
+            "image": "images/cake1.jpg",
+            "description": "Rich dark chocolate with edible gold leaf."
+        }
+    ],
     "menu": [
         {
             "name": "Tiramisu Cup",

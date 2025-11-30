@@ -7,20 +7,22 @@
     <title>Crave Bakery</title>
     <link rel="stylesheet" href="style.css">
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&family=Playfair+Display:wght@400;700&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
 
+    <div class="page-transition"></div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <a href="#" class="logo" id="nav-site-title">Crave Bakery</a>
+            <a href="index.html" class="logo" id="nav-site-title">Crave Bakery</a>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#menu">Menu</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -32,13 +34,26 @@
             <div class="hero-text">
                 <h1 id="home-title">Loading...</h1>
                 <p id="home-subtitle"></p>
-                <a href="#menu" class="btn">View Menu</a>
+                <a href="menu.html" class="btn">Explore Menu</a>
             </div>
             <div class="hero-image-container">
-                <img id="hero-img" src="" alt="Delicious Cake" class="fade-in">
+                <img id="hero-img" src="" alt="Delicious Cake">
             </div>
         </div>
     </header>
+
+    <!-- Specials Section -->
+    <section id="specials" class="section">
+        <div class="container">
+            <h2 class="section-title">Our Specials</h2>
+            <div id="specials-grid" class="menu-grid">
+                <!-- Specials injected here -->
+            </div>
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="menu.html" class="btn">View Full Menu</a>
+            </div>
+        </div>
+    </section>
 
     <!-- About Section -->
     <section id="about" class="section about">
@@ -53,23 +68,13 @@
         </div>
     </section>
 
-    <!-- Menu Section -->
-    <section id="menu" class="section menu">
-        <div class="container">
-            <h2 class="section-title">Our Menu</h2>
-            <div id="menu-grid" class="menu-grid">
-                <!-- Menu items will be injected here -->
-            </div>
-        </div>
-    </section>
-
     <!-- Reviews Section -->
     <section id="reviews" class="section reviews">
         <div class="container">
             <h2 class="section-title">Customer Love</h2>
             <div class="reviews-carousel">
                 <div id="reviews-container" class="review-card">
-                    <!-- Reviews will be injected here -->
+                    <!-- Reviews injected here -->
                 </div>
             </div>
         </div>
@@ -86,10 +91,6 @@
                     <p><strong>Address:</strong> <span id="contact-address"></span></p>
                 </div>
                 <div class="map-container">
-                    <!-- In a real scenario, this would be an iframe. For now, we'll use a placeholder or link if provided in JSON, but user asked for embed link in JSON. 
-                         Since the JSON has "GOOGLE_MAP_EMBED_LINK" as a placeholder, we will handle it gracefully in JS or just show a link/placeholder. 
-                         For this implementation, I'll create a placeholder div that JS can update if it's a real URL, or just text.
-                    -->
                     <div id="contact-map" class="map-placeholder">Map Loading...</div>
                 </div>
             </div>
