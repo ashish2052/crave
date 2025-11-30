@@ -1,0 +1,40 @@
+{
+    "site_title": "Crave Bakery",
+    "home": {
+        "title": "Fresh Cakes, Coffee & Happiness",
+        "subtitle": "A cozy bakery serving delicious cakes, pastries and coffee in Kathmandu.",
+        "hero_image": "images/hero.jpg"
+    },
+    "about": {
+        "title": "About Crave Bakery",
+        "description": "Crave Bakery is known for rich pastries, flavorful cakes, peaceful songs, free WiFi, and friendly staff. Customer favorites include Tiramisu, Oreo Milkshake, and Butterscotch Cake.",
+        "image": "images/cake1.jpg"
+    },
+    "menu": [
+        {
+            "name": "Tiramisu Cup",
+            "price": "NPR 300",
+            "image": "images/cake2.jpg"
+        },
+        {
+            "name": "Oreo Milkshake",
+            "price": "NPR 250",
+            "image": "images/drink1.jpg"
+        },
+        {
+            "name": "Blueberry Cheesecake",
+            "price": "NPR 350",
+            "image": "images/cake1.jpg"
+        }
+    ],
+    "reviews": [
+        "“Absolutely delicious Tiramisu — creamy and rich!”",
+        "“Peaceful songs, free WiFi, and amazing pastries!”",
+        "“Cakes are soft, fresh and full of flavor.”"
+    ],
+    "contact": {
+        "phone": "+977 9800000000",
+        "address": "Bakhundol, Lalitpur",
+        "map_embed": "GOOGLE_MAP_EMBED_LINK"
+    }
+}
