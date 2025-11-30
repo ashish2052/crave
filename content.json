@@ -1,3 +1,11 @@
+{
+    "site_title": "Crave Bakery Yala",
+    "hero": {
+        "title": "Artisanal Cakes, Crafted with Love",
+        "subtitle": "Experience the finest pastries and coffee in the heart of Kathmandu.",
+        "cta_text": "Explore Menu",
+        "image": "images/hero.jpg"
+    },
     "about": {
         "title": "Our Story",
         "subtitle": "Tradition Meets Elegance",
